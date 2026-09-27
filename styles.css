@@ -1,0 +1,111 @@
+:root {
+  --studio: #0f1b2d;      /* background: the studio at night */
+  --panel: #172a44;       /* raised surfaces */
+  --ink: #e8edf4;         /* body text */
+  --muted: #9fb0c5;       /* secondary text */
+  --caption: #ffd400;     /* the yellow of the video captions */
+  --tally: #e23b2e;       /* camera tally light */
+  --display: "Big Shoulders Display", "Arial Narrow", sans-serif;
+  --body: "Public Sans", system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { background: var(--studio); }
+body {
+  margin: 0;
+  background: var(--studio);
+  color: var(--ink);
+  font: 18px/1.6 var(--body);
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--caption); text-underline-offset: 3px; }
+a:focus-visible, .watch:focus-visible { outline: 3px solid var(--caption); outline-offset: 3px; border-radius: 4px; }
+
+/* hero: the channel banner, full bleed */
+.banner {
+  display: block;
+  width: 100%;
+  height: clamp(180px, 34vw, 460px);
+  object-fit: cover;
+  object-position: 50% 50%;
+  border-bottom: 4px solid var(--caption);
+}
+
+.column { max-width: 680px; margin: 0 auto; padding: 0 16px; }
+
+.intro { padding: 56px 0 24px; }
+.intro h1 {
+  font: 800 clamp(3rem, 9vw, 5.5rem)/0.95 var(--display);
+  letter-spacing: -0.01em;
+  margin: 0 0 24px;
+}
+.intro p { color: var(--muted); font-size: 1.125rem; margin: 0 0 16px; max-width: 60ch; }
+
+.watch {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+  padding: 14px 22px 14px 18px;
+  background: var(--caption);
+  color: var(--studio);
+  font: 700 1.25rem/1 var(--display);
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  border-radius: 999px;
+}
+.watch::before {
+  content: "";
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  background: var(--tally);
+  box-shadow: 0 0 0 3px rgba(226, 59, 46, 0.25);
+}
+.watch:hover { background: #ffe24d; }
+
+.method { padding: 40px 0 16px; }
+.method h2, .doc h2 {
+  font: 700 2rem/1.1 var(--display);
+  margin: 0 0 20px;
+}
+.method dl { margin: 0; }
+.method div {
+  padding: 16px 0 16px 20px;
+  border-left: 3px solid var(--caption);
+  margin-bottom: 16px;
+  background: linear-gradient(90deg, var(--panel), transparent 85%);
+}
+.method dt { font-weight: 700; margin-bottom: 4px; }
+.method dd { margin: 0; color: var(--muted); }
+.method .ai { border-left-color: var(--tally); }
+
+/* legal pages */
+.doc { padding: 48px 0 24px; }
+.doc h1 { font: 800 clamp(2.5rem, 7vw, 4rem)/1 var(--display); margin: 0 0 8px; }
+.doc .updated { color: var(--muted); margin: 0 0 32px; }
+.doc h2 { margin-top: 40px; }
+.doc p, .doc li { color: var(--ink); }
+.doc li { margin-bottom: 8px; }
+.back { font: 700 1.1rem/1 var(--display); letter-spacing: 0.02em; }
+.masthead {
+  display: block;
+  height: 120px;
+  width: 100%;
+  object-fit: cover;
+  border-bottom: 4px solid var(--caption);
+}
+
+footer {
+  margin-top: 56px;
+  padding: 24px 0 40px;
+  border-top: 1px solid var(--panel);
+  color: var(--muted);
+  font-size: 0.9375rem;
+}
+footer p { margin: 0 0 8px; }
+footer nav { display: flex; gap: 20px; flex-wrap: wrap; }
+
+@media (max-width: 520px) {
+  body { font-size: 17px; }
+  .intro { padding-top: 40px; }
+}
