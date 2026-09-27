@@ -21,15 +21,40 @@ body {
 a { color: var(--caption); text-underline-offset: 3px; }
 a:focus-visible, .watch:focus-visible { outline: 3px solid var(--caption); outline-offset: 3px; border-radius: 4px; }
 
-/* hero: the channel banner, full bleed */
-.banner {
+/* hero: studio photo with the logo laid over the blurred, lit half */
+.hero {
+  position: relative;
   display: block;
-  width: 100%;
-  height: clamp(180px, 34vw, 460px);
-  object-fit: cover;
-  object-position: 50% 50%;
+  height: clamp(260px, 38vw, 560px);
+  overflow: hidden;
   border-bottom: 4px solid var(--caption);
+  background: var(--studio);
 }
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 30% 50%;
+}
+.hero::after {  /* darken the left so the logo reads cleanly */
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(15, 27, 45, 0.55), rgba(15, 27, 45, 0) 60%);
+}
+.hero-logo {
+  position: absolute;
+  z-index: 1;
+  left: 6%;
+  top: 50%;
+  width: min(44%, 640px);
+  transform: translateY(-50%);
+  filter: drop-shadow(0 8px 28px rgba(0, 0, 0, 0.5));
+}
+.hero.small { height: 140px; }
+.hero.small .hero-logo { width: min(240px, 60%); }
 
 .column { max-width: 680px; margin: 0 auto; padding: 0 16px; }
 
@@ -87,13 +112,6 @@ a:focus-visible, .watch:focus-visible { outline: 3px solid var(--caption); outli
 .doc p, .doc li { color: var(--ink); }
 .doc li { margin-bottom: 8px; }
 .back { font: 700 1.1rem/1 var(--display); letter-spacing: 0.02em; }
-.masthead {
-  display: block;
-  height: 120px;
-  width: 100%;
-  object-fit: cover;
-  border-bottom: 4px solid var(--caption);
-}
 
 footer {
   margin-top: 56px;
@@ -104,6 +122,15 @@ footer {
 }
 footer p { margin: 0 0 8px; }
 footer nav { display: flex; gap: 20px; flex-wrap: wrap; }
+
+@media (max-width: 640px) {
+  .hero { height: clamp(220px, 62vw, 340px); }
+  .hero-bg { object-position: 22% 50%; }
+  .hero::after { background: rgba(15, 27, 45, 0.35); }
+  .hero-logo { left: 50%; width: 84%; transform: translate(-50%, -50%); }
+  .hero.small { height: 120px; }
+  .hero.small .hero-logo { width: min(220px, 60%); }
+}
 
 @media (max-width: 520px) {
   body { font-size: 17px; }
