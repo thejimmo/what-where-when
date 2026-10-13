@@ -26,6 +26,8 @@ jobs:
         with:
           python-version: "3.12"
       - run: python scripts/fetch_videos.py
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
       - name: Commit if changed
         run: |
           if git diff --quiet -- data/videos.json; then
