@@ -23,6 +23,23 @@
     <a class="watch" href="https://www.youtube.com/channel/UCnoH33xbDq0mzT_issIqlAA">Watch on YouTube</a>
   </section>
 
+  <section class="latest" id="latest" hidden>
+    <h2>Latest episode</h2>
+    <div class="player"></div>
+    <p class="latest-title"></p>
+  </section>
+
+  <section class="shorts" id="shorts" hidden>
+    <div class="row-head">
+      <h2>Latest Shorts</h2>
+      <div class="row-nav">
+        <button type="button" data-dir="-1" aria-label="Scroll Shorts back">&#8592;</button>
+        <button type="button" data-dir="1" aria-label="Scroll Shorts forward">&#8594;</button>
+      </div>
+    </div>
+    <ul class="shorts-row"></ul>
+  </section>
+
   <section class="method">
     <h2>How an episode is made</h2>
     <dl>
@@ -49,5 +66,6 @@
     </nav>
   </footer>
 </main>
+<script src="videos.js" defer></script>
 </body>
 </html>
