@@ -2,6 +2,7 @@
 // which a scheduled GitHub Action refreshes from the channel's RSS feed.
 (function () {
   var thumb = function (id, size) { return "https://i.ytimg.com/vi/" + id + "/" + size + ".jpg"; };
+  var clean = function (title) { return title.replace(/\s*#\S+/g, "").trim(); };  // drop "#history" etc.
 
   function el(tag, props) {
     var node = document.createElement(tag);
@@ -11,17 +12,18 @@
 
   // Show a thumbnail and only load YouTube's player once the visitor presses play.
   function showLatest(video) {
+    var title = clean(video.title);
     var section = document.getElementById("latest");
     var player = section.querySelector(".player");
     var button = el("button", { type: "button", className: "play" });
-    button.setAttribute("aria-label", "Play " + video.title);
+    button.setAttribute("aria-label", "Play " + title);
     var img = el("img", { src: thumb(video.id, "maxresdefault"), alt: "", loading: "lazy" });
     img.onerror = function () { img.onerror = null; img.src = thumb(video.id, "hqdefault"); };
     button.append(img, el("span", { className: "play-icon" }));
     button.addEventListener("click", function () {
       var frame = el("iframe", {
         src: "https://www.youtube-nocookie.com/embed/" + video.id + "?autoplay=1&rel=0",
-        title: video.title,
+        title: title,
         allowFullscreen: true
       });
       frame.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
@@ -29,7 +31,7 @@
       frame.focus();
     });
     player.append(button);
-    section.querySelector(".latest-title").textContent = video.title;
+    section.querySelector(".latest-title").textContent = title;
     section.hidden = false;
   }
 
@@ -40,7 +42,7 @@
       var link = el("a", { href: "https://www.youtube.com/shorts/" + video.id });
       link.append(
         el("img", { src: thumb(video.id, "hqdefault"), alt: "", loading: "lazy" }),
-        el("span", { textContent: video.title })
+        el("span", { textContent: clean(video.title) })
       );
       var item = el("li");
       item.append(link);
