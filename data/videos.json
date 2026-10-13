@@ -1,4 +1,136 @@
 {
-  "longform": [],
-  "shorts": []
+  "longform": [
+    {
+      "id": "mlp7gBF4r8E",
+      "title": "The Reichstag Fire: How Hitler Took Total Power in 52 Days",
+      "published": "2026-10-11T12:40:54Z"
+    },
+    {
+      "id": "Z5MSxBB6sV0",
+      "title": "The Volcano That Erased a City in Minutes: Mount Pelée | 1902",
+      "published": "2026-10-10T15:00:24Z"
+    },
+    {
+      "id": "keFYWHEPBRk",
+      "title": "Bonnie and Clyde: The True Story of Their Last Ride | 1930–1934",
+      "published": "2026-10-05T19:00:11Z"
+    },
+    {
+      "id": "78XBs4C9tyc",
+      "title": "The Shot That Changed America: McKinley's Assassination | 1901",
+      "published": "2026-10-02T16:33:38Z"
+    },
+    {
+      "id": "_ow8UWflc80",
+      "title": "What happened the year 1900 #history",
+      "published": "2024-02-24T18:30:17Z"
+    },
+    {
+      "id": "UaSSOTlzCQI",
+      "title": "What Where When – Your channel to understanding today by knowing about yesterday.",
+      "published": "2024-02-04T13:21:25Z"
+    }
+  ],
+  "shorts": [
+    {
+      "id": "jt8KiPmZwpM",
+      "title": "1941 Part 3: \"A Date Which Will Live in Infamy\" #history",
+      "published": "2026-10-12T15:00:06Z"
+    },
+    {
+      "id": "J8_rxXGC3Xo",
+      "title": "1941 Part 2: The Largest Invasion in History #history",
+      "published": "2026-10-09T15:00:09Z"
+    },
+    {
+      "id": "aPFQ2IMA5nM",
+      "title": "1941 Part 1: Penicillin Worked. Then It Ran Out. #history",
+      "published": "2026-10-08T15:00:33Z"
+    },
+    {
+      "id": "aRSSwjVWl4g",
+      "title": "1940 Part 3: London Bombed 57 Nights in a Row #history",
+      "published": "2026-10-07T15:00:23Z"
+    },
+    {
+      "id": "aYuoMz_DcEU",
+      "title": "1940 Part 2: The Little Boats That Saved an Army #history",
+      "published": "2026-10-06T15:00:35Z"
+    },
+    {
+      "id": "ZPlnHOdX1X8",
+      "title": "1940 Part 1: Denmark Fell in Six Hours #history",
+      "published": "2026-10-05T15:00:02Z"
+    },
+    {
+      "id": "DmVz_LXMJvY",
+      "title": "1939 Part 3: 4:45 a.m. World War Two Begins #history",
+      "published": "2026-10-02T18:43:37Z"
+    },
+    {
+      "id": "CQ-sAPWG3B8",
+      "title": "1939 Part 2: Hitler and Stalin Secretly Split Europe #history",
+      "published": "2026-10-02T18:43:14Z"
+    },
+    {
+      "id": "JzFGZial47g",
+      "title": "1939 Part 1: Banned From the Hall, She Sang to 75,000 #history",
+      "published": "2026-10-02T18:42:43Z"
+    },
+    {
+      "id": "ZtlCKB0kVsA",
+      "title": "1938 Part 3: \"Peace for Our Time.\" It Lasted 11 Months. #history",
+      "published": "2026-10-02T14:30:51Z"
+    },
+    {
+      "id": "LAwAOfqqX-4",
+      "title": "1938 Part 2: He Flew to California. He Landed in Ireland. #history",
+      "published": "2026-10-02T14:30:39Z"
+    },
+    {
+      "id": "fpVLFKO6K-U",
+      "title": "1938 Part 1: The Country That Vanished in a Weekend #history",
+      "published": "2026-10-02T14:30:27Z"
+    },
+    {
+      "id": "zlOooxcHDT0",
+      "title": "1937 Part 3: Shanghai Held 3 Months. Then Came Nanjing. #history",
+      "published": "2026-10-02T10:32:50Z"
+    },
+    {
+      "id": "NYXJjvvCY28",
+      "title": "1937 Part 2: Amelia Earhart Vanishes Over the Pacific #history",
+      "published": "2026-10-02T10:32:40Z"
+    },
+    {
+      "id": "jH-miqD9NTk",
+      "title": "1937 Part 1: Why Gas Smells: A School Explosion #history",
+      "published": "2026-10-02T10:32:30Z"
+    },
+    {
+      "id": "v3ONjfOREr0",
+      "title": "1936 Part 3: The King Quit. For the Woman He Loved. #history",
+      "published": "2026-10-01T15:08:51Z"
+    },
+    {
+      "id": "T2HGHPuvc9g",
+      "title": "1936 Part 2: Four Golds at Hitler's Olympics #history",
+      "published": "2026-10-01T15:08:36Z"
+    },
+    {
+      "id": "3aRIvCzd3rA",
+      "title": "1936 Part 1: The King's Doctor Timed His Death #history",
+      "published": "2026-10-01T15:08:24Z"
+    },
+    {
+      "id": "3AwMolivUzE",
+      "title": "1935 Part 3: Italy Invades Ethiopia. No Declaration of War. #history",
+      "published": "2026-10-01T10:22:49Z"
+    },
+    {
+      "id": "1UFx_mRLac8",
+      "title": "1935 Part 2: From Welfare to World Champion #history",
+      "published": "2026-10-01T10:22:35Z"
+    }
+  ]
 }
